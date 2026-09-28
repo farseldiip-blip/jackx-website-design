@@ -23,8 +23,9 @@ const archivo = localFont({
 })
 
 /**
- * Absolute origin used for canonical/OG URLs. The deploy workflow injects the real
- * GitHub Pages URL; the localhost default keeps local builds working.
+ * Absolute origin used for canonical/OG URLs.
+ * Set `NEXT_PUBLIC_SITE_URL` as a Vercel Environment Variable (e.g., `https://jackx.vercel.app`)
+ * for production. Defaults to localhost for local development.
  */
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 const url = (path: string) => new URL(`${BASE_PATH}${path}`, SITE_URL).toString()
