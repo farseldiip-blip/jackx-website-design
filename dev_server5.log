@@ -1,0 +1,66 @@
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.2:3000
+✓ Ready in 497ms
+✓ Running next.config.mjs took 32ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+ GET / 200 in 710ms (next.js: 341ms, application-code: 369ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
++                         className="archivo_91838e65-module__m8SoCG__variable"
+-                         className="archivo_91838e65-module__m8SoCG__variable js"
+                        >
+                          <head>
+                          <body
+-                           monica-id="ofpnmcalabcbjgholdjcjblkibolbppb"
+-                           monica-version="9.0.22"
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="page.tsx">
+                                <SegmentTrieNode>
+                                <Page>
+                                  <HomePage>
+                                    <main className="jackx-page">
+                                      <link>
+                                      <link>
+                                      <Header>
+                                        <div>
+                                        <header
++                                         className="site-header site-header--overlay"
+-                                         className="site-header site-header--overlay is-scrolled"
+                                          data-header={true}
+                                        >
+                                      ...
+                            ...
+                  ...
+ 

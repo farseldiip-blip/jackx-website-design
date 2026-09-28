@@ -1,0 +1,7 @@
+▲ Next.js 16.3.3
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.2:3000
+✓ Ready in 185ms
+✓ Running next.config.mjs took 25ms
+Error: "next start" does not work with "output: export" configuration. Use "npx serve@latest out" instead.
+    at ignore-listed frames

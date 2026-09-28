@@ -1,0 +1,16 @@
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.2:3000
+✓ Ready in 498ms
+✓ Running next.config.mjs took 22ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+ GET /menu/ 404 in 968ms (next.js: 725ms, application-code: 243ms)
+ GET /jackx-website-design%20/_next/static/chunks/app_159akrv._.css 404 in 190ms (next.js: 22ms, application-code: 167ms)
+ GET /jackx-website-design%20/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0l6zv4b._.js 404 in 494ms (next.js: 41ms, application-code: 453ms)
+ GET /jackx-website-design%20/_next/static/chunks/0tao_next_dist_compiled_react-dom_0gxctoe._.js 404 in 417ms (next.js: 84ms, application-code: 332ms)
+ GET /jackx-website-design%20/_next/static/chunks/0tao_next_dist_compiled_next-devtools_index_0z8uvsk.js 404 in 421ms (next.js: 66ms, application-code: 355ms)
+ GET /jackx-website-design%20/_next/static/chunks/0tao_next_dist_client_09x7_o9._.js 404 in 445ms (next.js: 121ms, application-code: 324ms)
+ GET /jackx-website-design%20/_next/static/chunks/0tao_next_dist_compiled_0p9-cog._.js 404 in 446ms (next.js: 112ms, application-code: 334ms)
+ GET /jackx-website-design%20/_next/static/chunks/0tao_next_dist_compiled_react-server-dom-turbopack_0lt87s0._.js 404 in 448ms (next.js: 99ms, application-code: 349ms)
