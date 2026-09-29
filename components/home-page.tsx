@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Picture, PreloadHero } from '@/components/picture'
 import { BottomNav, DirectionsLink, Footer, Header, InstagramLink } from '@/components/site-chrome'
-import { ADDRESS_LINES, GALLERY, INSTAGRAM, INSTAGRAM_HANDLE, SOCIAL_TILES, asset } from '@/lib/site'
+import { ADDRESS_LINES, GALLERY, INSTAGRAM, INSTAGRAM_HANDLE, SIGNATURE, SOCIAL_TILES, asset } from '@/lib/site'
 
 /** Home page. Pure server component — every animation is CSS driven. */
 export function HomePage() {
@@ -30,12 +30,33 @@ export function HomePage() {
               <br />
               and good moments.
             </p>
-            <a href={asset('/menu/')} className="circle-link">
-              View
-              <br />
-              menu <ArrowUpRight size={20} aria-hidden="true" />
+            <a href={asset('/menu/')} className="circle-link hero-cta">
+              <span className="hero-cta-label">
+                <span>View</span>
+                <span>menu</span>
+              </span>
+              <span className="hero-cta-arrow" aria-hidden="true">
+                <ArrowUpRight size={20} />
+              </span>
             </a>
           </div>
+          {/* Secondary focal point for the lower half of the hero. Rendered on
+              every viewport but only displayed below 700px, where the photograph
+              otherwise carries the bottom of the composition alone. The whole
+              block is the link, so the image and the type share one tap target. */}
+          <a className="hero-showcase" href={asset(SIGNATURE.href)}>
+            <span className="hero-showcase-media">
+              <Picture name="signature" className="cover-img" />
+            </span>
+            <span className="hero-showcase-copy">
+              <span className="hero-showcase-label">{SIGNATURE.label}</span>
+              <span className="hero-showcase-name">{SIGNATURE.name}</span>
+              <span className="hero-showcase-cta">
+                Explore menu
+                <ArrowUpRight size={12} aria-hidden="true" />
+              </span>
+            </span>
+          </a>
         </div>
         <p className="hero-mark" aria-hidden="true">
           JACKX

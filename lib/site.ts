@@ -18,6 +18,19 @@ export const DIRECTIONS =
 export const ADDRESS_LINES = ['Nile Corniche', 'Extension of Al-Sousana Street', 'Next to First Abu Dhabi Bank'] as const
 
 /**
+ * The mobile hero showcase.
+ *
+ * JACKX has no published item names yet — the menu page is still "coming soon" —
+ * so `name` is an explicit, obviously-fake placeholder rather than invented
+ * product copy. Replace it with the real signature item; nothing else changes.
+ */
+export const SIGNATURE = {
+  label: 'Signature',
+  name: 'Item name',
+  href: '/menu/',
+} as const
+
+/**
  * Responsive image registry.
  *
  * Every entry is cropped server-side to the exact aspect ratio the layout renders at,
@@ -117,6 +130,15 @@ const IMAGE_SPECS = {
   'category-drinks': {
     alt: 'JACKX drinks: espresso and iced coffee with roasted beans',
     crops: [{ w: 900, h: 1200, widths: [480, 900], sizes: '(min-width: 701px) 32vw, 92vw' }],
+  },
+  /**
+   * The hero showcase renders the drinks photograph at roughly a fifth of the
+   * width, so it declares its own `sizes` against the same physical files —
+   * without it the browser would pull the 900px crop for a 76px tile.
+   */
+  signature: {
+    alt: 'Espresso and roasted beans on the JACKX table',
+    crops: [{ file: 'category-drinks', w: 900, h: 1200, widths: [480, 900], sizes: '20vw' }],
   },
 }
 

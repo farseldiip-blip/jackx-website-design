@@ -67,7 +67,7 @@ const COLLECTOR = `
     function disp(sel){ var el=document.querySelector(sel); return el?getComputedStyle(el).display:null; }
     function w(sel){ var el=document.querySelector(sel); return el?Math.round(el.getBoundingClientRect().width):null; }
 
-    var containment = ['.hero','.story-image','.gallery-item','.menu-tease','.visit-image','.social-tile','.category']
+    var containment = ['.hero','.story-image','.gallery-item','.menu-tease','.visit-image','.social-tile','.category','.hero-showcase-media']
       .map(function(sel){
         var cell = document.querySelector(sel);
         if(!cell) return {sel:sel, ok:null};
